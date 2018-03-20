@@ -1,0 +1,31 @@
+<h1>{{title}}</h1>
+
+<table class="table table-bordered table-striped">
+  <thead>
+  <tr>
+    <th scope="col">ID</th>
+    <!--<th scope="col">user_ID</th>-->
+    <th scope="col">Name</th>
+    <th scope="col">Description</th>
+    <th scope="col">Start Date</th>
+    <th scope="col">End Date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let task of tasks">
+    <th scope="row">{{ task.id }}</th>
+    <!--<td>{{ task.user_id }}</td>-->
+    <td>{{ task.name }}</td>
+    <td>{{ task.description }}</td>
+    <td>{{ task.start_date }}</td>
+    <td>{{ task.end_date }}</td>
+  </tr>
+  </tbody>
+</table>
+
+<!--<p>Tasks:</p>-->
+<!--<ul>-->
+  <!--<li *ngFor="let task of tasks">-->
+    <!--{{ task.id }} | {{ task.user_id }} | {{ task.name }} | {{ task.description }} | {{ task.start_date }} | {{ task.end_date }}-->
+  <!--</li>-->
+<!--</ul>-->
