@@ -1,24 +1,76 @@
 <h1>Create Task</h1>
-<form>
 
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
-           placeholder="Task Name">
-  </div>
+<div>
+  <label>Task name:
+    <input #taskName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="addTask(taskName.value); taskName.value=''">Submit</button>
+</div>
 
-  <div class="form-group">
-    <label for="description">Description</label>
-    <input type="text" class="form-control" id="description" aria-describedby="descriptionHelp"
-           placeholder="Task Description">
-  </div>
+<!--<form (ngSubmit)="onSubmit()" #taskForm="ngForm">-->
 
-  <div class="form-group">
-    <label for="recipient">Recipient</label>
-    <input type="text" class="form-control" id="recipient" aria-describedby="recipientHelp"
-           placeholder="Task Recipient">
-  </div>
+  <!--<div class="form-group">-->
+    <!--<label for="proj_id">Project ID</label>-->
+    <!--<input type="number"-->
+           <!--class="form-control"-->
+           <!--id="proj_id"-->
+           <!--name="proj_id"-->
+           <!--required-->
+           <!--aria-describedby="projectIdHelp"-->
+           <!--placeholder="Project ID"-->
+           <!--&gt;-->
+    <!--<div [hidden]="proj_id.valid || proj_id.pristine" class="alert alert-danger">Proj_id is required </div>-->
+  <!--</div>-->
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <!--<div class="form-group">-->
+    <!--<label for="name">Name</label>-->
+    <!--<input type="text"-->
+           <!--class="form-control"-->
+           <!--id="name"-->
+           <!--name="proj_id"-->
+           <!--required-->
+           <!--aria-describedby="emailHelp"-->
+           <!--placeholder="Task Name"-->
+           <!--&gt;-->
+    <!--<div [hidden]="name.valid || name.pristine" class="alert alert-danger">Name is required </div>-->
+  <!--</div>-->
 
-</form>
+  <!--<div class="form-group">-->
+    <!--<label for="description">Description</label>-->
+    <!--<input type="text"-->
+           <!--class="form-control"-->
+           <!--id="description"-->
+           <!--name="description"-->
+           <!--aria-describedby="descriptionHelp"-->
+           <!--placeholder="Task Description"-->
+           <!--&gt;-->
+    <!--<div [hidden]="description.valid || description.pristine" class="alert alert-danger">Description is required </div>-->
+  <!--</div>-->
+
+  <!--<div class="form-group">-->
+    <!--<label for="recipient">Recipient</label>-->
+    <!--<input type="text"-->
+           <!--class="form-control"-->
+           <!--id="recipient"-->
+           <!--name="recipient"-->
+           <!--aria-describedby="recipientHelp"-->
+           <!--placeholder="Task Recipient"-->
+           <!--&gt;-->
+  <!--</div>-->
+
+  <!--<div class="form-group">-->
+    <!--<label for="start_date">Start date</label>-->
+    <!--<input type="date"-->
+           <!--class="form-control"-->
+           <!--id="start_date"-->
+           <!--name="start_date"-->
+           <!--aria-describedby="startDateHelp"-->
+           <!--placeholder="Start Date"-->
+           <!--&gt;-->
+  <!--</div>-->
+
+  <!--&lt;!&ndash;<button type="submit" class="btn btn-primary">Submit</button>&ndash;&gt;-->
+  <!--<button (click)="add(heroName.value); heroName.value=''">-->
+
+<!--</form>-->
