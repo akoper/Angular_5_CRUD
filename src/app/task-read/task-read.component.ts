@@ -10,8 +10,6 @@ import { TaskService} from "../task.service";
 
 export class TaskReadComponent implements OnInit {
 
-    title = 'Read Tasks';
-
     tasks: Task[];
 
     constructor(private taskService: TaskService) {
