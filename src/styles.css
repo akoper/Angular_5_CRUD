@@ -7,3 +7,7 @@ body {
     padding: 3rem 1.5rem;
     text-align: center;
 }
+
+li.nav-item {
+    margin-right: 25px;
+}
