@@ -4,12 +4,10 @@ import {Task} from "./task";
 import {Observable} from "rxjs/Observable";
 import {of} from 'rxjs/observable/of';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-//import {MessageService} from "primeng/components/common/messageservice";
 
 const httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
-
 
 @Injectable()
 export class TaskService {
@@ -23,12 +21,22 @@ export class TaskService {
     addTask (task: Task): Observable<Task> {
         return this.http.post<Task>(this.tasksUrl, task, httpOptions);
     }
+    //this.http.post(url, {moo:"foo",goo:"loo"}).subscribe(res => console.log(res.json()));
+
 
     // addTask (task: Task): Observable<Task> {
     //     return this.http.post<Task>(this.tasksUrl, task, httpOptions).pipe(
     //         tap((task: Task) => this.log(`added task w/ id=${task.id}`)),
     //         catchError(this.handleError<Task>('addTask'))
     //     );
+    // }
+
+    // addTask(name: string): void {
+    //     // name = name.trim();
+    //     console.log(name);
+    //     if (!name) { return; }
+    //     this.taskService.addTask({ name } as Task)
+    //         .subscribe();
     // }
 
     /** GET: get all tasks from the server */
