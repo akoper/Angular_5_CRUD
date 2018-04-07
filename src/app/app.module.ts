@@ -12,8 +12,6 @@ import { TableModule} from 'primeng/table';
 import { HeroReadComponent } from './hero-read/hero-read.component';
 import { HttpClientModule} from "@angular/common/http";
 import { TaskService} from "./task.service";
-import { TaskReadDatatableComponent } from './task-read-datatable/task-read-datatable.component';
-import { TaskReadDatatableUpdateComponent } from './task-read-datatable-update/task-read-datatable-update.component';
 import { TaskUpdateComponent } from './task-update/task-update.component';
 import { TaskDeleteComponent } from './task-delete/task-delete.component';
 import { DataTableModule} from "primeng/primeng";
@@ -29,8 +27,6 @@ import { HttpModule} from "@angular/http";
         TaskReadComponent,
         TaskShowComponent,
         HeroReadComponent,
-        TaskReadDatatableComponent,
-        TaskReadDatatableUpdateComponent,
         TaskUpdateComponent,
         TaskDeleteComponent,
     ],
